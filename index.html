@@ -4,17 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-    <script src="script.js" defer></script>
+    <script src="JS/toggle.js" defer></script>
+    <script src="JS/pricing.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <header>
-      <div class="main-logo">
-        <a href="#">
-          <img src="./assets/logo/Group.svg" alt="main-logo" />
-        </a>
+      <div class="header-container">
+        <div class="main-logo">
+          <a href="#">
+            <img src="./assets/logo/Group.svg" alt="main-logo" />
+          </a>
+        </div>
+        <div class="hide-nav-for-mobile">
+          <nav>
+            <ul>
+              <li><a href="#">STORIES</a></li>
+              <li><a href="#">FEATURES</a></li>
+              <li><a href="#">PRICING</a></li>
+            </ul>
+          </nav>
+          <div class="header-button">
+            <a href="#"><button>GET AN INVITE</button></a>
+          </div>
+        </div>
+        <div class="hide-for-desktop">
+          <button class="burger">
+            <img
+              src="./assets/icons/burger-icon-1.svg"
+              alt=""
+              class="burger-icon1"
+            />
+            <img
+              src="./assets/icons/burger-icon-2.svg"
+              alt=""
+              class="burger-icon2"
+            />
+          </button>
+        </div>
       </div>
-      <div class="hide-for-mobile">
+      <div class="nide-nav-for-desktop">
         <nav>
           <ul>
             <li><a href="#">STORIES</a></li>
@@ -22,30 +51,8 @@
             <li><a href="#">PRICING</a></li>
           </ul>
         </nav>
-        <div class="header-button">
-          <a href="#"><button>GET AN INVITE</button></a>
-        </div>
-      </div>
-      <div class="hide-for-desktop">
-        <button class="burger">
-          <img
-            src="./assets/icons/burger-icon-1.svg"
-            alt=""
-            class="burger-icon1"
-          />
-          <img
-            src="./assets/icons/burger-icon-2.svg"
-            alt=""
-            class="burger-icon2"
-          />
-        </button>
-        <nav class="mobile-nav">
-          <ul>
-            <li><a href="#">STORIES</a></li>
-            <li><a href="#">FEATURES</a></li>
-            <li><a href="#">PRICING</a></li>
-          </ul>
-        </nav>
+        <span></span>
+        <a href="#"><button>GET AN INVITE</button></a>
       </div>
     </header>
   </body>

@@ -1,27 +1,43 @@
-.hide-for-mobile {
+.hide-nav-for-mobile {
   display: none;
 }
-header {
+.header-container {
   position: relative;
   justify-content: space-between;
   @include flex-row;
   @include header-container;
   z-index: 100;
 
-  .hide-for-desktop {
-    .burger {
-      background-color: #fff;
-      .burger-icon2 {
-        display: none;
-      }
-    }
-
-    .mobile-nav {
+  .burger {
+    background-color: #fff;
+    .burger-icon2 {
       display: none;
     }
   }
+
   &::after {
     background-color: #fff;
     @include header-after;
+  }
+}
+.nide-nav-for-desktop {
+  width: 100%;
+  background-color: #fff;
+  padding: 3.2rem;
+  @include flex-column;
+  display: none;
+  ul {
+    @include flex-column;
+    gap: 2rem;
+  }
+  span {
+    margin: 2rem 0;
+    width: 100%;
+    height: 0.1rem;
+    opacity: 0.25;
+    background: #000;
+  }
+  button {
+    @include header-button;
   }
 }
