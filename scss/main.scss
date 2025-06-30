@@ -1,0 +1,10 @@
+// base and reset styles
+@import "base/reset";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// start header
+@import "layout/header";
+body {
+  background-color: darkslategrey;
+}

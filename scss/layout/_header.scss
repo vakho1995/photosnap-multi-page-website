@@ -1,0 +1,27 @@
+.hide-for-mobile {
+  display: none;
+}
+header {
+  position: relative;
+  justify-content: space-between;
+  @include flex-row;
+  @include header-container;
+  z-index: 100;
+
+  .hide-for-desktop {
+    .burger {
+      background-color: #fff;
+      .burger-icon2 {
+        display: none;
+      }
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+  }
+  &::after {
+    background-color: #fff;
+    @include header-after;
+  }
+}
