@@ -20,24 +20,32 @@
     @include header-after;
   }
 }
-.nide-nav-for-desktop {
-  width: 100%;
-  background-color: #fff;
-  padding: 3.2rem;
-  @include flex-column;
+.hide-nav-for-desktop {
   display: none;
-  ul {
+  &.open {
     @include flex-column;
-    gap: 2rem;
-  }
-  span {
-    margin: 2rem 0;
     width: 100%;
-    height: 0.1rem;
-    opacity: 0.25;
-    background: #000;
-  }
-  button {
-    @include header-button;
+    background-color: #fff;
+    padding: 3.2rem;
+    @include mob-header-font;
+    ul {
+      @include flex-column;
+      gap: 2rem;
+      li {
+        a {
+          color: #000;
+        }
+      }
+    }
+    span {
+      margin: 2rem 0;
+      width: 100%;
+      height: 0.1rem;
+      opacity: 0.25;
+      background: #000;
+    }
+    button {
+      @include header-button;
+    }
   }
 }

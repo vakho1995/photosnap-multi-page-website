@@ -1,3 +1,4 @@
+// mixin for flex
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -24,10 +25,9 @@
 @mixin header-button {
   padding: 1.4rem 6.9rem;
   background: #000;
-  color: #fff;
   text-align: center;
-  font-size: 15px;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.25rem;
+  color: #fff;
 }
 
 // after and before mixins
@@ -38,4 +38,10 @@
   height: 100%;
   left: 0;
   z-index: -5;
+}
+// mixin for fonts
+@mixin mob-header-font {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
 }
