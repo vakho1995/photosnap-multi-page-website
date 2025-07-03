@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
   .header-container {
     @include flex(row, space-between, center, 0);
+    padding: 1.6rem 4rem 1.6rem 4rem;
     .desktop-nav {
       @include flex(row, center, center, 0);
       ul {
@@ -25,6 +26,24 @@
     }
     .burger-icons {
       display: none;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .header-container {
+    padding: 1.6rem 16.5rem 1.6rem 16.5rem;
+    ul {
+      a {
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+    }
+    button {
+      &:hover {
+        background-color: $light-grey;
+        color: $pure-black;
+      }
     }
   }
 }
