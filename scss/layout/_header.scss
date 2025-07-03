@@ -1,12 +1,13 @@
-.hide-nav-for-mobile {
-  display: none;
-}
 .header-container {
   position: relative;
-  justify-content: space-between;
-  @include flex-row;
-  @include header-container;
+  @include flex(row, space-between, center, 0);
+  width: 100%;
+  padding: 2.8rem 2.4rem 2.8rem 2.4rem;
   z-index: 100;
+  .desktop-nav,
+  .header-button {
+    display: none;
+  }
 
   .burger {
     background-color: #fff;
@@ -20,21 +21,19 @@
     @include header-after;
   }
 }
-.hide-nav-for-desktop {
+// burger nav bar
+.mobile-nav {
   display: none;
-  &.open {
-    @include flex-column;
+  &.is-open {
+    @include flex(column, center, center, 0);
     width: 100%;
     background-color: #fff;
     padding: 3.2rem;
-    @include mob-header-font;
+    @include header-font;
     ul {
-      @include flex-column;
-      gap: 2rem;
-      li {
-        a {
-          color: #000;
-        }
+      @include flex(column, center, center, 2rem);
+      a {
+        color: #000;
       }
     }
     span {
@@ -45,7 +44,13 @@
       background: #000;
     }
     button {
-      @include header-button;
+      @include header-button(
+        1.4rem 6.9rem,
+        $pure-black,
+        1.5rem,
+        $pure-white,
+        0.25rem
+      );
     }
   }
 }

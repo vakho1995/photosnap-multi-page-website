@@ -1,33 +1,31 @@
 // mixin for flex
-@mixin flex-center {
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
 }
 
-@mixin flex-row {
-  display: flex;
-  align-items: center;
-}
+// // mixins for header
+// @mixin header-container {
+//   width: 100%;
+//   padding: 2.8rem 2.4rem 2.8rem 2.4rem;
+// }
 
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-// mixins for container
-@mixin header-container {
-  width: 100%;
-  padding: 2.8rem 2.4rem 2.8rem 2.4rem;
-}
-@mixin header-button {
-  padding: 1.4rem 6.9rem;
-  background: #000;
-  text-align: center;
-  letter-spacing: 0.25rem;
-  color: #fff;
+// header button
+@mixin header-button(
+  $padding: 1.4rem 6.9rem,
+  $background: $pure-black,
+  $font-size: 1.5rem,
+  $color: $pure-white,
+  $letter-spacing: 0.25rem
+) {
+  padding: $padding;
+  background: $background;
+  font-size: $font-size;
+  color: $color;
+  letter-spacing: $letter-spacing;
 }
 
 // after and before mixins
@@ -39,9 +37,15 @@
   left: 0;
   z-index: -5;
 }
+
 // mixin for fonts
-@mixin mob-header-font {
-  font-size: 1.5rem;
+@mixin header-font(
+  $size: 1.5rem,
+  $letter-spacing: 0.25rem,
+  $color: $pure-black
+) {
+  font-size: $size;
+  letter-spacing: $letter-spacing;
+  color: $color;
   font-weight: 700;
-  color: #000;
 }

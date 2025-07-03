@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+  .header-container {
+    @include flex(row, space-between, center, 0);
+    .desktop-nav {
+      @include flex(row, center, center, 0);
+      ul {
+        @include flex(row, center, center, 3.7rem);
+        a {
+          @include header-font(1.2rem, 0.2rem, $pure-black);
+        }
+      }
+    }
+    .header-button {
+      display: block;
+      font-weight: 700;
+      button {
+        @include header-button(
+          1.2rem 2.4rem,
+          $pure-black,
+          1.2rem,
+          $pure-white,
+          0.2rem
+        );
+      }
+    }
+    .burger-icons {
+      display: none;
+    }
+  }
+}
