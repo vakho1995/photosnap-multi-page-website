@@ -9,6 +9,11 @@
 @import "layout/header";
 body {
   background-color: darkslategrey;
+  main {
+    height: 300px;
+  }
 }
+//footer
+@import "layout/footer";
 // responsive
 @import "responsive/header-responsive";
