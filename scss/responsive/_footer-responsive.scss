@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+  footer {
+    .footer-container {
+      padding: 6.4rem 4rem;
+      @include flex(row, space-between, center, 0);
+      .footer-left {
+        @include flex(column, center, start, 0);
+        .footer-nav-mobile {
+          display: none;
+        }
+        .footer-icons {
+          margin-bottom: unset;
+        }
+        .footer-nav-tablet {
+          display: block;
+        }
+      }
+      .footer-right {
+        @include flex(column, space-between, flex-end, 14rem);
+        .footer-invite-div {
+          @include flex(row, center, center, 1.6rem);
+        }
+      }
+    }
+  }
+}

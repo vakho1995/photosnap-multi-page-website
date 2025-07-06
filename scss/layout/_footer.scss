@@ -9,11 +9,26 @@ footer {
       @include flex(column, center, center, 0);
       .footer-logo {
         margin-bottom: 3.2rem;
+        .footer-nav-desktop {
+          display: none;
+        }
       }
-      .footer-icons {
-        @include flex(row, center, center, 1.2rem);
-        margin-bottom: 5rem;
+      .footer-nav-tablet {
+        display: none;
+        margin-bottom: 9.2rem;
+        .footer-ul {
+          @include flex(row, center, center, 2.6rem);
+          a {
+            @include header-font(1.2rem, 2px, $pure-white);
+          }
+        }
       }
+    }
+    .footer-icons {
+      @include flex(row, center, center, 1.2rem);
+      margin-bottom: 5rem;
+    }
+    .footer-nav-mobile {
       .footer-ul {
         @include flex(column, center, center, 1.9rem);
         a {
@@ -21,17 +36,17 @@ footer {
         }
       }
     }
-    .footer-right {
-      @include flex(column, center, center, 3.4rem);
-      .footer-invite-div {
-        @include flex(row, center, center, 2.2rem);
-        @include header-font(1.2rem, 2px, $pure-white);
-      }
-      .footer-paragraf {
-        @include header-font(1.5rem, normal, $pure-white);
-        font-weight: 400;
-        opacity: 0.5025;
-      }
+  }
+  .footer-right {
+    @include flex(column, center, center, 3.4rem);
+    .footer-invite-div {
+      @include flex(row, center, center, 2.2rem);
+      @include header-font(1.2rem, 2px, $pure-white);
+    }
+    .footer-paragraf {
+      @include header-font(1.5rem, normal, $pure-white);
+      font-weight: 400;
+      opacity: 0.5025;
     }
   }
 }
