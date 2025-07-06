@@ -1,0 +1,19 @@
+.footer-nav-mobile {
+  .footer-ul {
+    @include flex(column, center, center, 1.9rem);
+    a {
+      @include header-font(1.2rem, 2px, $pure-white);
+    }
+  }
+}
+
+.footer-nav-tablet {
+  display: none;
+  margin-bottom: 9.2rem;
+  .footer-ul {
+    @include flex(row, center, center, 2.6rem);
+    a {
+      @include header-font(1.2rem, 2px, $pure-white);
+    }
+  }
+}

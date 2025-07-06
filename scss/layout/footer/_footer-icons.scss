@@ -1,0 +1,4 @@
+.footer-icons {
+  @include flex(row, center, center, 1.2rem);
+  margin-bottom: 5rem;
+}
