@@ -1,4 +1,4 @@
-// -----------------footer tablet and > ------------------
+// -----------------footer tablet and more ------------------
 
 @media (min-width: 768px) {
   footer {
@@ -24,6 +24,39 @@
       @include flex(column, space-between, flex-end, 14rem);
       .footer-invite-div {
         @include flex(row, center, center, 1.6rem);
+      }
+    }
+  }
+}
+
+// -----------------footer desktop and more ------------------
+@media (min-width: 1440px) {
+  footer {
+    .footer-container {
+      padding: 6.4rem 17.1rem;
+      .footer-left {
+        @include flex(row, center, start, 10.9rem);
+        .footer-logo-and-deskIcons {
+          margin-bottom: unset;
+          @include flex(column, unset, start, 13rem);
+          .footer-icons-desktop {
+            display: block;
+            @include flex(row, center, center, 1.2rem);
+          }
+        }
+        .footer-icons {
+          display: none;
+        }
+        .footer-nav-mobile {
+          display: none;
+        }
+
+        .footer-nav-tablet {
+          margin-bottom: unset;
+          .footer-ul {
+            @include flex(column, space-between, start, 4rem);
+          }
+        }
       }
     }
   }
