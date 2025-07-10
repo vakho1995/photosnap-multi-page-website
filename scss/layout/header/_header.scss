@@ -1,0 +1,30 @@
+// header layout
+@import "./header-nav";
+
+.header-container {
+  position: relative;
+  @include flex(row, space-between, center, 0);
+  width: 100%;
+  padding: 2.8rem 2.4rem 2.8rem 2.4rem;
+  z-index: 100;
+  .desktop-nav,
+  .header-button {
+    display: none;
+  }
+
+  .burger {
+    background-color: #fff;
+    .burger-icon2 {
+      display: none;
+    }
+  }
+
+  &::after {
+    background-color: #fff;
+    @include header-after;
+  }
+}
+//nav
+// @import "./header-nav";
+// responsinve
+@import "./header-responsive";

@@ -1,27 +1,4 @@
-.header-container {
-  position: relative;
-  @include flex(row, space-between, center, 0);
-  width: 100%;
-  padding: 2.8rem 2.4rem 2.8rem 2.4rem;
-  z-index: 100;
-  .desktop-nav,
-  .header-button {
-    display: none;
-  }
-
-  .burger {
-    background-color: #fff;
-    .burger-icon2 {
-      display: none;
-    }
-  }
-
-  &::after {
-    background-color: #fff;
-    @include header-after;
-  }
-}
-// burger nav bar
+// ------------ navigation for mobile ----------
 .mobile-nav {
   display: none;
   &.is-open {
@@ -51,6 +28,16 @@
         $pure-white,
         0.25rem
       );
+    }
+  }
+}
+// -------- navigation for tablet display and more ---------
+.desktop-nav {
+  @include flex(row, center, center, 0);
+  ul {
+    @include flex(row, center, center, 3.7rem);
+    a {
+      @include header-font(1.2rem, 0.2rem, $pure-black);
     }
   }
 }

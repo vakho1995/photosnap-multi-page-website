@@ -42,6 +42,9 @@
           .footer-icons-desktop {
             display: block;
             @include flex(row, center, center, 1.2rem);
+            .facebook-icon {
+              @include icon(white, "#fbGradient");
+            }
           }
         }
         .footer-icons {

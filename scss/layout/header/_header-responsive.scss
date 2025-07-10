@@ -1,34 +1,17 @@
+//  tablet responsive from 768px to 1440px
 @media (min-width: 768px) {
   .header-container {
     @include flex(row, space-between, center, 0);
     padding: 1.6rem 4rem 1.6rem 4rem;
-    .desktop-nav {
-      @include flex(row, center, center, 0);
-      ul {
-        @include flex(row, center, center, 3.7rem);
-        a {
-          @include header-font(1.2rem, 0.2rem, $pure-black);
-        }
-      }
-    }
-    .header-button {
-      display: block;
-      font-weight: 700;
-      button {
-        @include header-button(
-          1.2rem 2.4rem,
-          $pure-black,
-          1.2rem,
-          $pure-white,
-          0.2rem
-        );
-      }
-    }
+    @import "./header-nav";
+    @import "./header-button";
     .burger-icons {
       display: none;
     }
   }
 }
+
+//  desktop responsive from 1440px and more
 @media (min-width: 1440px) {
   .header-container {
     padding: 1.6rem 16.5rem 1.6rem 16.5rem;

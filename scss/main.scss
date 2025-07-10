@@ -6,7 +6,7 @@
 @import "base/typography";
 
 // header
-@import "layout/header";
+@import "layout/header/header";
 body {
   background-color: darkslategrey;
   main {
@@ -16,5 +16,5 @@ body {
 //footer
 @import "layout/footer/footer";
 // responsive
-@import "responsive/header-responsive";
+// @import "responsive/header-responsive";
 // @import "responsive/footer-responsive";

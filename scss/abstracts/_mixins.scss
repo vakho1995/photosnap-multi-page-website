@@ -43,3 +43,11 @@
   color: $color;
   font-weight: 700;
 }
+// mixin for icons
+@mixin icon($fill, $hover-fill) {
+  cursor: pointer;
+  fill: $fill;
+  &:hover {
+    fill: url($hover-fill);
+  }
+}

@@ -1,0 +1,14 @@
+// header button from 768px
+.header-button {
+  display: block;
+  font-weight: 700;
+  button {
+    @include header-button(
+      1.2rem 2.4rem,
+      $pure-black,
+      1.2rem,
+      $pure-white,
+      0.2rem
+    );
+  }
+}
